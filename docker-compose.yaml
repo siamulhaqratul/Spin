@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  unity-spiner-game:
+    image: spiner-game-service-1.0.0
+    build:
+      context: .
+    ports:
+      - "8083:8080"
+    volumes:
+      - .:/usr/src/app
