@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY . .
 
 # Expose the port
-EXPOSE 8083
+EXPOSE 8080
 
 # Command to serve the application
 CMD ["python3", "-m", "http.server", "8080"]
