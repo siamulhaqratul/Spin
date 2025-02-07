@@ -7,12 +7,12 @@
     <script>
         // Function to notify Unity of the minimize/restore state and connection status
         function sendEventToUnity(eventType) {
-            console.log("Sending event to Unity: " + eventType);
+           // console.log("Sending event to Unity: " + eventType);
             var unityInstance = window.unityInstance;
             if (unityInstance) {
                 unityInstance.SendMessage('MinimizeRestoreHandler', 'OnBrowserMinimizeRestore', eventType);
             } else {
-                console.log("Unity instance not found.");
+              //  console.log("Unity instance not found.");
             }
         }
 
@@ -55,8 +55,8 @@
     </script>
 </head>
 <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-    <canvas id="unity-canvas" width=1080 height=1152 style="width: 1080px; height: 1152px; background: url('Build/s4.jpg') center / cover"></canvas>
-    <script src="Build/s4.loader.js"></script>
+    <canvas id="unity-canvas" width=1080 height=1152 style="width: 1080px; height: 1152px; background: url('Build/s1.jpg') center / cover"></canvas>
+    <script src="Build/s1.loader.js"></script>
     <script>
         if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
             // Mobile device style: fill the whole browser client area with the game canvas:
@@ -74,9 +74,9 @@
         }
 
         createUnityInstance(document.querySelector("#unity-canvas"), {
-            dataUrl: "Build/s4.data",
-            frameworkUrl: "Build/s4.framework.js",
-            codeUrl: "Build/s4.wasm",
+            dataUrl: "Build/s1.data",
+            frameworkUrl: "Build/s1.framework.js",
+            codeUrl: "Build/s1.wasm",
             streamingAssetsUrl: "StreamingAssets",
             companyName: "KhalifaTech",
             productName: "Spinner",
@@ -85,9 +85,9 @@
             // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
         }).then((unityInstance) => {
             window.unityInstance = unityInstance;
-            console.log("Unity instance created.");
+           // console.log("Unity instance created.");
         }).catch((message) => {
-            console.error(message);
+           // console.error(message);
         });
     </script>
 </body>
