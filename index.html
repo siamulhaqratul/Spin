@@ -5,9 +5,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Start loading assets right away, to have them (partly) loaded already when they are requested -->
-  <link rel="preload" href="Build//s4.data.unityweb" as="fetch" type="application/octet-stream" crossorigin>
-  <link rel="preload" href="Build/s4.framework.js.unityweb" as="script">
-  <link rel="preload" href="Build/s4.wasm.unityweb" as="fetch" type="application/wasm" crossorigin>
+  <link rel="preload" href="Build//s5.data.unityweb" as="fetch" type="application/octet-stream" crossorigin>
+  <link rel="preload" href="Build/s5.framework.js.unityweb" as="script">
+  <link rel="preload" href="Build/s5.wasm.unityweb" as="fetch" type="application/wasm" crossorigin>
   <title>Spinner</title>
   <script>
     // Function to notify Unity of the minimize/restore state and connection status
@@ -156,14 +156,14 @@
       <div id="unity-loading-bar-inner"></div>
     </div>
   </div>
-  <script src="Build/s4.loader.js"></script>
+  <script src="Build/s5.loader.js"></script>
   <script>
     var buildUrl = "Build";
-    var loaderUrl = buildUrl + "/s4.loader.js";
+    var loaderUrl = buildUrl + "/s5.loader.js";
     var config = {
-      dataUrl: buildUrl + "/s4.data.unityweb",
-      frameworkUrl: buildUrl + "/s4.framework.js.unityweb",
-      codeUrl: buildUrl + "/s4.wasm.unityweb",
+      dataUrl: buildUrl + "/s5.data.unityweb",
+      frameworkUrl: buildUrl + "/s5.framework.js.unityweb",
+      codeUrl: buildUrl + "/s5.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "KhalifaTech",
       productName: "Spinner",
