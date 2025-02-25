@@ -12,16 +12,15 @@
   <script>
     // Function to notify Unity of the minimize/restore state and connection status
     function sendEventToUnity(eventType) {
-        //console.log("Sending event to Unity: " + eventType);
+       // console.log("Sending event to Unity: " + eventType);
         var unityInstance = window.unityInstance;
         if (unityInstance) {
             unityInstance.SendMessage('MinimizeRestoreHandler', 'OnBrowserMinimizeRestore', eventType);
         } else {
-          // console.log("Unity instance not found.");
+           // console.log("Unity instance not found.");
         }
     }
 
-    // Detect when the page becomes visible or hidden
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
             sendEventToUnity('minimize');
@@ -56,6 +55,8 @@
     window.addEventListener('offline', function() {
         sendEventToUnity('offline');
     });
+
+
 </script>
   <style>
     * {
@@ -190,6 +191,7 @@
       }).then(function(unityInstance) {
         unityGame = unityInstance;
         loadingContainer.classList.add("finished");
+        window.unityInstance = unityInstance;
       }).catch(function(message) {
         alert(message);
       });
